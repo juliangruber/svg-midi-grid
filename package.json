@@ -1,0 +1,17 @@
+{
+  "name": "svg-midi-grid",
+  "version": "0.0.0",
+  "license": "MIT",
+  "repository": "juliangruber/svg-midi-grid",
+  "description": "Render a grid suitable for midi notes as SVG",
+  "dependencies": {
+    "bel": "^4.6.0"
+  },
+  "devDependencies": {
+    "beefy": "^2.1.8",
+    "browserify": "^14.1.0"
+  },
+  "scripts": {
+    "example": "beefy example.js"
+  }
+}
