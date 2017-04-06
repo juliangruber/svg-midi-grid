@@ -9,11 +9,13 @@ Render a grid suitable for midi notes as SVG.
 
 ```js
 const html = require('bel')
-const grid = require('svg-midi-grid')
+const Grid = require('svg-midi-grid')
+
+const grid = new Grid()
 
 document.body.appendChild(html`
   <svg height=200 width=400>
-    ${grid({
+    ${grid.render({
       height: 201,
       width: 401,
       cellHeight: 5,
