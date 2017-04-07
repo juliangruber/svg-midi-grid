@@ -30,16 +30,14 @@ Grid.prototype._render = function (opts) {
     <g
       stroke="hsl(0, 0%, 40%)"
       fill="hsl(0, 0%, 20%)"
-      ${x || y
-        ? `transform="translate(x, y)"`
-        : ''}
+      ${x || y ? `transform="translate(x, y)"` : ''}
     >
       <rect width=${width} height=${height} />
       ${Array(columns).fill(0).map((_, i) => html`
-        <line x1=${i*cellWidth} x2=${i*cellWidth} y1=0 y2=${height}>
+        <line x1=${i * cellWidth} x2=${i * cellWidth} y1=0 y2=${height}>
       `)}
       ${Array(rows).fill(0).map((_, i) => html`
-        <line x1=0 x2=${width} y1=${i*cellHeight} y2=${i*cellHeight}>
+        <line x1=0 x2=${width} y1=${i * cellHeight} y2=${i * cellHeight}>
       `)}
     </g>
   `
@@ -49,10 +47,10 @@ Grid.prototype._render = function (opts) {
 }
 
 Grid.prototype._update = function (opts) {
-  return opts.height !== this.height
-    || opts.width !== this.width
-    || opts.cellHeight !== this.cellHeight
-    || opts.cellWidth !== this.cellWidth
-    || opts.x !== this.x
-    || opts.y !== this.y
+  return opts.height !== this.height ||
+    opts.width !== this.width ||
+    opts.cellHeight !== this.cellHeight ||
+    opts.cellWidth !== this.cellWidth ||
+    opts.x !== this.x ||
+    opts.y !== this.y
 }

@@ -11,9 +11,12 @@
   },
   "devDependencies": {
     "beefy": "^2.1.8",
-    "browserify": "^14.1.0"
+    "browserify": "^14.1.0",
+    "prettier-standard-formatter": "^0.222222222222222.333333333333333",
+    "standard": "^10.0.1"
   },
   "scripts": {
-    "example": "beefy example.js"
+    "example": "beefy example.js",
+    "test": "prettier-standard-formatter *.js && standard"
   }
 }
