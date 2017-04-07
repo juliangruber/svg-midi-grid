@@ -30,7 +30,7 @@ Grid.prototype._render = function (opts) {
     <g
       stroke="hsl(0, 0%, 40%)"
       fill="hsl(0, 0%, 20%)"
-      ${x || y ? `transform="translate(x, y)"` : ''}
+      ${x || y ? `transform="translate(${x}, ${y})"` : ''}
     >
       <rect width=${width} height=${height} />
       ${Array(columns).fill(0).map((_, i) => html`
