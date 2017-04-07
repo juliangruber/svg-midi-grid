@@ -1,6 +1,6 @@
 {
   "name": "svg-midi-grid",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "license": "MIT",
   "repository": "juliangruber/svg-midi-grid",
   "description": "Render a grid suitable for midi notes as SVG",
