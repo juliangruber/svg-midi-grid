@@ -12,6 +12,8 @@ function Grid () {
   this.width = null
   this.cellHeight = null
   this.cellWidth = null
+  this.x = null
+  this.y = null
 }
 
 Grid.prototype._render = function (opts) {
@@ -19,11 +21,19 @@ Grid.prototype._render = function (opts) {
   const width = this.width = opts.width
   const cellHeight = this.cellHeight = opts.cellHeight
   const cellWidth = this.cellWidth = opts.cellWidth
+  const x = this.x = opts.x || 0
+  const y = this.y = opts.y || 0
 
   const columns = Math.ceil(width / cellWidth)
   const rows = Math.ceil(height / cellHeight)
   const el = html`
-    <g stroke="hsl(0, 0%, 40%)" fill="hsl(0, 0%, 20%)">
+    <g
+      stroke="hsl(0, 0%, 40%)"
+      fill="hsl(0, 0%, 20%)"
+      ${x || y
+        ? `transform="translate(x, y)"`
+        : ''}
+    >
       <rect width=${width} height=${height} />
       ${Array(columns).fill(0).map((_, i) => html`
         <line x1=${i*cellWidth} x2=${i*cellWidth} y1=0 y2=${height}>
@@ -43,4 +53,6 @@ Grid.prototype._update = function (opts) {
     || opts.width !== this.width
     || opts.cellHeight !== this.cellHeight
     || opts.cellWidth !== this.cellWidth
+    || opts.x !== this.x
+    || opts.y !== this.y
 }
