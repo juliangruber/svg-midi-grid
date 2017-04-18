@@ -39,7 +39,7 @@ Grid.prototype._render = function (opts) {
           y1=0
           y2=${height}
           stroke=${i % 4 === 0
-            ? 'hsl(0, 0%, 40%)'
+            ? 'hsl(0, 0%, 35%)'
             : ''}
         >
       `)}
