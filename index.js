@@ -27,7 +27,7 @@ Grid.prototype._render = function (opts) {
   const columns = Math.ceil(width / cellWidth)
   const rows = Math.ceil(height / cellHeight)
   const el = html`
-    <g stroke="hsl(0, 0%, 40%)" fill="hsl(0, 0%, 20%)" transform="translate(${x}, ${y})">
+    <g stroke="hsl(0, 0%, 30%)" fill="hsl(0, 0%, 20%)" transform="translate(${x}, ${y})">
       <rect width=${width} height=${height} />
       ${Array(rows).fill(0).map((_, i) => html`
         <line x1=0 x2=${width} y1=${i * cellHeight} y2=${i * cellHeight}>
@@ -39,7 +39,7 @@ Grid.prototype._render = function (opts) {
           y1=0
           y2=${height}
           stroke=${i % 4 === 0
-            ? 'hsl(0, 0%, 50%)'
+            ? 'hsl(0, 0%, 40%)'
             : ''}
         >
       `)}
