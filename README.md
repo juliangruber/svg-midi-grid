@@ -11,7 +11,7 @@ Render a grid suitable for midi notes as SVG.
 const html = require('bel')
 const Grid = require('svg-midi-grid')
 
-const grid = new Grid()
+const grid = Grid()
 
 document.body.appendChild(html`
   <svg height=200 width=400>

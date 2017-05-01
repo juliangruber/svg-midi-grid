@@ -1,7 +1,7 @@
 const html = require('bel')
 const Grid = require('.')
 
-const grid = new Grid()
+const grid = Grid()
 
 document.body.appendChild(
   html`
